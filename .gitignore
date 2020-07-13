@@ -1,1 +1,4 @@
 node_modules/
+# Config folder
+config/contactform.js
+config/default.json
