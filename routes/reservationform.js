@@ -4,9 +4,7 @@ const moment = require("moment");
 // contactform.js to let users contact us
 const express = require("express");
 const router = express.Router();
-const nodemailer = require("nodemailer");
 const config = require("config");
-const creds = require("../config/nodemailerCreds");
 const { check, validationResult } = require("express-validator");
 
 const ReservationForm = require("../models/ReservationForm");
