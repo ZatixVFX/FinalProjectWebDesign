@@ -3,7 +3,8 @@ const express = require("express");
 const router = express.Router();
 const nodemailer = require("nodemailer");
 const config = require("config");
-const creds = require("../config/nodemailerCreds");
+const creds = require("../config/creds");
+const transporter = require("../config/transporter");
 const { check, validationResult } = require("express-validator");
 
 const ContactForm = require("../models/ContactForm");
@@ -46,15 +47,41 @@ router.post(
         message,
       });
 
-      await contactform.save();
+      const transporter = nodemailer.createTransport({
+        host: "smtp.gmail.com", // SMPT host provider
+        port: 587,
+        auth: {
+          user: creds.USER,
+          pass: creds.PASS,
+        },
+      });
+
+      await transporter.verify((error, success) => {
+        if (error) {
+          console.log(error);
+        } else {
+          console.log("Server is ready to take messages");
+        }
+      });
 
       let mail = {
         from: creds.USER,
         replyTo: `${name} ${email}`,
-        to: creds.USER, // Change to email address that you want to receive messages on
-        subject: "Message",
+        to: creds.USER,
+        subject: "BurgerDen Contact Form",
         text: message,
       };
+
+      await contactform.save();
+
+      await transporter.sendMail(mail, (err, data) => {
+        if (err) {
+          console.error(err);
+        } else {
+          console.log("Sucesss");
+          res.send("Mail sent Successfuly");
+        }
+      });
     } catch (err) {
       console.error(err.message);
       res.status(500).send("Server Error");
