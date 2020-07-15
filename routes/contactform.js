@@ -4,7 +4,6 @@ const router = express.Router();
 const nodemailer = require("nodemailer");
 const config = require("config");
 const creds = require("../config/creds");
-const transporter = require("../config/transporter");
 const { check, validationResult } = require("express-validator");
 
 const ContactForm = require("../models/ContactForm");
