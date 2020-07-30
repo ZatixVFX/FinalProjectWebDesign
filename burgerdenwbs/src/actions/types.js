@@ -1,0 +1,12 @@
+// Beef burger types
+export const GET_BEEFBURGERS = "GET_BEEFBURGERS";
+export const BEEFBURGERS_ERROR = "BEEFBURGERS_ERROR";
+
+export const GET_FOODITEMS = "GET_FOODITEMS";
+export const ADD_FOODITEM = "ADD_FOODITEM";
+export const DELETE_FOODITEM = "DELETE_FOODITEM";
+export const SET_CURRENT = "SET_CURRENT";
+export const CLEAR_CURRENT = "CLEAR_CURRENT";
+export const CLEAR_FOODITEMS = "CLEAR_FOODITEMS";
+export const SET_LOADING = "SET_LOADING";
+export const FOODITEMS_ERROR = "FOODITEMS_ERROR";
