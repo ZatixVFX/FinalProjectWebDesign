@@ -23,7 +23,8 @@
     "jsonwebtoken": "^8.5.1",
     "moment": "^2.27.0",
     "mongoose": "^5.9.22",
-    "nodemailer": "^6.4.10"
+    "nodemailer": "^6.4.10",
+    "react-router": "^5.2.0"
   },
   "devDependencies": {
     "concurrently": "^5.2.0",

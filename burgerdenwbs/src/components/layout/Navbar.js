@@ -41,7 +41,7 @@ const HomeNavbar = () => (
     <Link to="/login" className="navbar-item has-text-white">
       <i className="far fa-user-circle fa-2x"></i>
     </Link>
-    <Link to="/login" className="navbar-item has-text-white">
+    <Link to="/cart" className="navbar-item has-text-white">
       <i className="fa" style={{ fontSize: "25px" }}>
         &#xf290;
       </i>

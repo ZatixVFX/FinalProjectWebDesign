@@ -1,18 +1,12 @@
-import React, { Fragment, useEffect } from "react";
-import { connect } from "react-redux";
-import PropTypes from "prop-types";
+import React, { Fragment } from "react";
 
-import { getBeefBurgers } from "../../actions/foodItemAction";
 import Navbar from "../layout/Navbar";
 import PopularMeals from "./PopularMeals";
-import Loading from "../layout/Loading";
+import PopularMealItems from "./PopularMealItems";
+import FindUs from "./FindUs";
+import Footer from "../footer/Footer";
 
-const Home = ({ beefburger: { beefburgers, loading }, getBeefBurgers }) => {
-  useEffect(() => {
-    getBeefBurgers();
-    // eslint-disable-next-line
-  }, []);
-
+const Home = () => {
   return (
     <Fragment>
       <Navbar />
@@ -40,28 +34,34 @@ const Home = ({ beefburger: { beefburgers, loading }, getBeefBurgers }) => {
           </div>
         </div>
         <div className="hero is-fullheight">
-          <div className="hero-header has-text-centered">
+          <div
+            className="hero-header has-text-centered"
+            style={{ paddingTop: "4rem" }}
+          >
             <h1 className="title">Popular meals</h1>
           </div>
-          <div className="hero-body">
-            {loading ? (
-              <Loading />
-            ) : (
-              beefburgers.map((item) => <p key={item.id}>{item.title}</p>)
-            )}
+          <div
+            className="hero-body hero-body-style"
+            style={{ padding: "9rem 5rem" }}
+          >
+            <div className="columns" style={gridstyle}>
+              {PopularMealItems.map((item) => (
+                <PopularMeals item={item} key={item.id} />
+              ))}
+            </div>
           </div>
         </div>
       </section>
+      <FindUs />
+      <Footer />
     </Fragment>
   );
 };
 
-Home.propTypes = {
-  beefburger: PropTypes.object.isRequired,
+const gridstyle = {
+  display: "grid",
+  gridTemplateColumns: "repeat(3, 1fr)",
+  gridGap: "1rem",
 };
 
-const mapStateToProps = (state) => ({
-  beefburger: state.beefburger,
-});
-
-export default connect(mapStateToProps, { getBeefBurgers })(Home);
+export default Home;

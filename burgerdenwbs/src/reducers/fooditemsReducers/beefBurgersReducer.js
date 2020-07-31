@@ -2,10 +2,10 @@ import {
   GET_BEEFBURGERS,
   SET_LOADING,
   BEEFBURGERS_ERROR,
-} from "../actions/types";
+} from "../../actions/types";
 
 const initialState = {
-  beefburgers: null,
+  beefburgers: [],
   current: null,
   loading: false,
   error: null,
