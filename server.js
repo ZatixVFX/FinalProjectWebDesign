@@ -24,9 +24,7 @@ if (process.env.NODE_ENV === "production") {
   app.use(express.static("burgerdenwbs/build"));
 
   app.get("*", (req, res) =>
-    res.sendFile(
-      path.resolve(__dirname, "burgerdendenwbs", "build", "index.html")
-    )
+    res.sendFile(path.resolve(__dirname, "burgerdenwbs", "build", "index.html"))
   );
 }
 
