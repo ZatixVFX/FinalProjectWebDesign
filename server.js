@@ -15,7 +15,7 @@ app.use(express.json({ extended: false }));
 app.use("/api/users", require("./routes/users"));
 app.use("/api/auth", require("./routes/auth"));
 app.use("/api/cart", require("./routes/cart"));
-app.use("/api/contactform", require("./routes/contactform"));
+//app.use("/api/contactform", require("./routes/contactform"));
 app.use("/api/fooditems", require("./routes/fooditems"));
 
 // Server static assets in production
