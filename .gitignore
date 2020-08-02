@@ -1,6 +1,10 @@
 node_modules/
 # Config folder
-config/default.json
-config/production.json
-config/transporter.js
-config/creds.js
+/client/build
+
+/client/.env.local
+/client/.env.development.local
+/client/.env.test.local
+/client/.env.production.local
+
+npm-debug.log*
