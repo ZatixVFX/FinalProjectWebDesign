@@ -14,32 +14,36 @@ const Cart = () => {
         >
           <h1 className="title is-1">Order</h1>
         </div>
-        <div className="hero-body-style">
+        <div className="hero-body-order">
           <div className="columns">
             <div className="column">
               {FoodItems.map((item) => (
                 <div className="container is-flex">
-                  <figure className="image" style={{ width: "197.51px" }}>
+                  <figure className="mt-3 order-img">
                     <img
                       src={item.img}
                       alt={item.title}
-                      style={{ width: "48%", height: "75%" }}
+                      className="img-order-style"
                     />
                   </figure>
-                  <p className="is-inline-flex">
-                    {item.title}{" "}
-                    <p className="has-text-black has-text-right ml-3">
-                      R{item.price}{" "}
+                  <div
+                    className="is-inline-flex mt-3"
+                    style={{ position: "relative" }}
+                  >
+                    <p className="is-inline-flex">
+                      {item.title}{" "}
+                      <p className="has-text-black has-text-right ml-3">
+                        R{item.price}{" "}
+                      </p>
                     </p>
-                  </p>
-                  <input
-                    type="number"
-                    defaultValue={1}
-                    max={10}
-                    min={9}
-                    className="input is-small ml-3"
-                    style={{ width: "10%" }}
-                  />
+                    <input
+                      type="number"
+                      defaultValue={1}
+                      max={10}
+                      className="input is-small ml-3"
+                      style={{ width: "15%" }}
+                    />
+                  </div>
                 </div>
               ))}
             </div>

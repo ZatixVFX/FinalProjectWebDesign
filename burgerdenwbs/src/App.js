@@ -9,12 +9,18 @@ import Login from "./components/register_login/Login";
 import Register from "./components/register_login/Register";
 import Cart from "./components/cart/Cart";
 
+import setAuthToken from "./utils/setAuthToken";
+
 import { Provider } from "react-redux";
 import store from "./store";
 
 import "./styles/styles.css";
 import "./bulma-0.9.0/css/bulma.css";
 import "./App.css";
+
+if (localStorage.token) {
+  setAuthToken(localStorage.token);
+}
 
 function App() {
   return (

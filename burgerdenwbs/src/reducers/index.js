@@ -7,7 +7,11 @@ import desertsReducer from "./fooditemsReducers/desertsReducers";
 import hotdrinksReducer from "./fooditemsReducers/hotdrinksReducer";
 import sidesReducer from "./fooditemsReducers/sidesReducer";
 
+import alertsReducer from "./alertsReducer";
+import authReducer from "./authReducer";
+
 export default combineReducers({
+  // food items reducers
   beefburger: beefBurgersReducer,
   chickenburger: chickeBurgersReducer,
   gazelleburger: gazelleBurgersReducer,
@@ -15,4 +19,8 @@ export default combineReducers({
   desert: desertsReducer,
   hotdrink: hotdrinksReducer,
   side: sidesReducer,
+
+  // alerts
+  alerts: alertsReducer,
+  auth: authReducer,
 });

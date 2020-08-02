@@ -16,18 +16,24 @@ const Footer = () => {
           <h1 className="title is-5">Contact us:</h1>
           <ul>
             <li>
-              <i class="fas fa-phone fa-1x" style={{ marginRight: "1rem" }}></i>{" "}
+              <i
+                className="fas fa-phone fa-1x"
+                style={{ marginRight: "1rem" }}
+              ></i>{" "}
               0678293301
             </li>
             <li>
               <i
-                class="far fa-envelope fa-1x"
+                className="far fa-envelope fa-1x"
                 style={{ marginRight: "1rem" }}
               ></i>{" "}
               Customercare@Burgerden.co.za
             </li>
             <li>
-              <i class="fas fa-fax fa-1x" style={{ marginRight: "1rem" }}></i>{" "}
+              <i
+                className="fas fa-fax fa-1x"
+                style={{ marginRight: "1rem" }}
+              ></i>{" "}
               0678293801
             </li>
           </ul>
@@ -36,16 +42,16 @@ const Footer = () => {
           <h1 className="title is-5">Follow us:</h1>
           <div className="container">
             <a href="#none">
-              <i class="fab fa-facebook-square fa-2x"></i>
+              <i className="fab fa-facebook-square fa-2x"></i>
             </a>
             <a href="#none">
-              <i class="fab fa-instagram-square fa-2x"></i>
+              <i className="fab fa-instagram-square fa-2x"></i>
             </a>
             <a href="#none">
-              <i class="fab fa-youtube-square fa-2x"></i>
+              <i className="fab fa-youtube-square fa-2x"></i>
             </a>
             <a href="#none">
-              <i class="fab fa-twitter-square fa-2x"></i>
+              <i className="fab fa-twitter-square fa-2x"></i>
             </a>
           </div>
         </div>

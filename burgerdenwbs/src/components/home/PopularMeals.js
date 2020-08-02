@@ -34,7 +34,7 @@ const PopularMeals = ({ item }) => {
               R{item.price}
             </p>
             <a href="#none" style={{ float: "right" }}>
-              <i class="fas fa-plus-circle"></i> Add to cart
+              <i className="fas fa-plus-circle"></i> Add to cart
             </a>{" "}
           </div>
         </div>

@@ -164,6 +164,12 @@ a.has-text-white:hover {
     height: 90% !important;
     margin-left: 2rem !important;
   }
+
+  .hero.is-medium .hero-body-order {
+    padding: 9rem 9.5rem !important;
+    padding-left: 7rem !important;
+    padding-right: 1rem !important;
+  }
 }
 
 @media screen and (min-width: 1920px), print {
@@ -193,9 +199,10 @@ a.has-text-white:hover {
 .login-box {
   margin-left: 22.66667%;
   border-radius: 11px;
-  -webkit-box-shadow: 10px 10px 25px 1px rgba(0, 0, 0, 0.53);
-  -moz-box-shadow: 10px 10px 25px 1px rgba(0, 0, 0, 0.53);
-  box-shadow: 10px 10px 25px 1px rgba(0, 0, 0, 0.53);
+  border: 1px rgb(170, 170, 170) double;
+  -webkit-box-shadow: -1px 1px 31px -10px rgba(255, 255, 255, 1);
+  -moz-box-shadow: -1px 1px 31px -10px rgba(255, 255, 255, 1);
+  box-shadow: -1px 1px 31px -10px rgba(255, 255, 255, 1);
 }
 
 .form-spacing {
@@ -215,4 +222,34 @@ a.has-text-white:hover {
   border: 1px #8f8f8f solid;
   padding-right: 0.2rem;
   border-radius: 0.3rem;
+}
+
+.form-bg-img {
+  background-image: url("../resources/images/register_login_bg.png");
+  background-size: 254px;
+}
+
+.order-img {
+  width: 226.51px !important;
+}
+
+.img-order-style {
+  width: 120.51px !important;
+  height: 110%;
+}
+
+.user-authenticated {
+  color: #369cf5 !important;
+}
+
+.navbar-item .line-height {
+  line-height: 0 !important;
+}
+
+.dropdown-style {
+  background-color: black !important;
+}
+
+.dropdown-style:hover {
+  background-color: black !important;
 }
