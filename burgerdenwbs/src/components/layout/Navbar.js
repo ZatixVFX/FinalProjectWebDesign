@@ -60,16 +60,18 @@ const Navbar = ({ auth: { isAuthenticated }, loadUser, logout }) => {
         <div className="navbar-item dropdown is-hoverable">
           <div className="dropdown-trigger line-height">
             <Link
+              to=""
               className="navbar-item far fa-user-circle fa-2x user-authenticated"
               aria-haspopup="true"
               aria-controls="dropdown-menu-1"
             ></Link>
           </div>
           <div className="dropdown-menu" id="dropdown-menu-1" role="menu">
-            <Link className="dropdown-item has-text-white dropdown-style">
+            <Link to="" className="dropdown-item has-text-white dropdown-style">
               Account
             </Link>
             <Link
+              to=""
               onClick={onLogout}
               className="dropdown-item has-text-white dropdown-style"
             >
