@@ -2,15 +2,19 @@ import React, { Fragment, useEffect } from "react";
 import { connect } from "react-redux";
 import PropTypes from "prop-types";
 
-import { loadUser } from "../../actions/authAction";
+import { loadUser, logout } from "../../actions/authAction";
 import { Link } from "react-router-dom";
 import { Link as LinkScroll } from "react-scroll";
 
-const Navbar = ({ auth: { isAuthenticated }, loadUser }) => {
+const Navbar = ({ auth: { isAuthenticated }, loadUser, logout }) => {
   useEffect(() => {
     loadUser();
     // eslint-disable-next-line
   }, []);
+
+  const onLogout = () => {
+    logout();
+  };
 
   const HomeNavbar = () => (
     <Fragment>
@@ -65,7 +69,10 @@ const Navbar = ({ auth: { isAuthenticated }, loadUser }) => {
             <Link className="dropdown-item has-text-white dropdown-style">
               Account
             </Link>
-            <Link className="dropdown-item has-text-white dropdown-style">
+            <Link
+              onClick={onLogout}
+              className="dropdown-item has-text-white dropdown-style"
+            >
               Logout
             </Link>
           </div>
@@ -108,10 +115,11 @@ const Navbar = ({ auth: { isAuthenticated }, loadUser }) => {
 
 Navbar.propTypes = {
   loadUser: PropTypes.func.isRequired,
+  logout: PropTypes.func.isRequired,
 };
 
 const mapStateToProps = (state) => ({
   auth: state.auth,
 });
 
-export default connect(mapStateToProps, { loadUser })(Navbar);
+export default connect(mapStateToProps, { loadUser, logout })(Navbar);
