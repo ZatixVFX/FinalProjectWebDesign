@@ -1,5 +1,6 @@
 node_modules/
 # Config folder
 config/default.json
+config/production.json
 config/transporter.js
 config/creds.js
