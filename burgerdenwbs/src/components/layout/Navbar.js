@@ -59,11 +59,11 @@ const Navbar = ({ auth: { isAuthenticated }, loadUser, logout }) => {
       {isAuthenticated ? (
         <div className="navbar-item dropdown is-hoverable">
           <div className="dropdown-trigger line-height">
-            <a
+            <Link
               className="navbar-item far fa-user-circle fa-2x user-authenticated"
               aria-haspopup="true"
               aria-controls="dropdown-menu-1"
-            ></a>
+            ></Link>
           </div>
           <div className="dropdown-menu" id="dropdown-menu-1" role="menu">
             <Link className="dropdown-item has-text-white dropdown-style">
