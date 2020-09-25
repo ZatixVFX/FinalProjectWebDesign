@@ -18,7 +18,6 @@ const Cart = ({
   const delItem = (e) => {
     let foodItem = e.target.getAttribute("ping");
     delCartItem(token, foodItem);
-    window.location.reload(false);
   };
 
   const Order = () => {
