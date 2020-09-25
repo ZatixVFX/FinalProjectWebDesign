@@ -8,6 +8,11 @@ const fooditems = require("../config/fooditems.json");
 //access        Public
 
 router.get("/beefburgers", (req, res) => {
+  req.header("Access-Control-Allow-Origin", "*");
+  req.header(
+    "Access-Control-Allow-Headers",
+    "Origin, X-Requested-With, Content-Type, Accept"
+  );
   try {
     res.json(fooditems.beefburgers);
   } catch (err) {

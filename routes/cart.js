@@ -28,7 +28,8 @@ router.post(
   [
     auth,
     [
-      check("item", "Item is required").not().isEmpty(),
+      check("title", "title is required").not().isEmpty(),
+      check("img", "img is required").not().isEmpty(),
       check("price", "price is required").not().isEmpty(),
     ],
   ],
@@ -38,11 +39,12 @@ router.post(
       return res.status(400).json({ errors: errors.array() });
     }
 
-    const { item, price } = req.body;
+    const { title, img, price } = req.body;
 
     try {
       const newCart = new Cart({
-        item,
+        title,
+        img,
         price,
         user: req.user.id,
       });

@@ -3,12 +3,22 @@ import { connect } from "react-redux";
 import PropTypes from "prop-types";
 
 import { loadUser, logout } from "../../actions/authAction";
+import { getCart } from "../../actions/cartAction";
 import { Link } from "react-router-dom";
 import { Link as LinkScroll } from "react-scroll";
 
-const Navbar = ({ auth: { isAuthenticated }, loadUser, logout }) => {
+const Navbar = ({
+  auth: { token, isAuthenticated },
+  getCart,
+  loadUser,
+  logout,
+}) => {
   useEffect(() => {
-    loadUser();
+    if (isAuthenticated) {
+      loadUser();
+    }
+
+    getCart(token);
     // eslint-disable-next-line
   }, []);
 
@@ -67,7 +77,10 @@ const Navbar = ({ auth: { isAuthenticated }, loadUser, logout }) => {
             ></Link>
           </div>
           <div className="dropdown-menu" id="dropdown-menu-1" role="menu">
-            <Link to="" className="dropdown-item has-text-white dropdown-style">
+            <Link
+              to="/account"
+              className="dropdown-item has-text-white dropdown-style"
+            >
               Account
             </Link>
             <Link
@@ -118,10 +131,11 @@ const Navbar = ({ auth: { isAuthenticated }, loadUser, logout }) => {
 Navbar.propTypes = {
   loadUser: PropTypes.func.isRequired,
   logout: PropTypes.func.isRequired,
+  getCart: PropTypes.func.isRequired,
 };
 
 const mapStateToProps = (state) => ({
   auth: state.auth,
 });
 
-export default connect(mapStateToProps, { loadUser, logout })(Navbar);
+export default connect(mapStateToProps, { getCart, loadUser, logout })(Navbar);

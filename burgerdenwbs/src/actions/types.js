@@ -47,6 +47,12 @@ export const LOGIN_FAIL = "LOGIN_FAIL";
 // Logout type
 export const LOGOUT = "LOGOUT";
 
+// cart types
+export const GET_CART = "GET_CART";
+export const ADD_TO_CART = "ADD_TO_CART";
+export const DEL_CART_ITEM = "DEL_CART_ITEM";
+export const CART_ERROR = "CART_ERROR";
+
 export const CLEAR_ERRORS = "CLEAR_ERRORS";
 
 export const GET_FOODITEMS = "GET_FOODITEMS";

@@ -12,12 +12,15 @@ const LocationItem = () => {
         <h2 className="title is-6">Contact Us:</h2>
         <ul>
           <li>
-            <i class="fas fa-phone fa-1x" style={{ marginRight: "1rem" }}></i>{" "}
+            <i
+              className="fas fa-phone fa-1x"
+              style={{ marginRight: "1rem" }}
+            ></i>{" "}
             0678383421
           </li>
           <li>
             <i
-              class="far fa-envelope fa-1x"
+              className="far fa-envelope fa-1x"
               style={{ marginRight: "1rem" }}
             ></i>{" "}
             Lansdowne@Burgerden.co.za
@@ -33,12 +36,15 @@ const LocationItem = () => {
         <h2 className="title is-6">Contact Us:</h2>
         <ul>
           <li>
-            <i class="fas fa-phone fa-1x" style={{ marginRight: "1rem" }}></i>{" "}
+            <i
+              className="fas fa-phone fa-1x"
+              style={{ marginRight: "1rem" }}
+            ></i>{" "}
             0677383532
           </li>
           <li>
             <i
-              class="far fa-envelope fa-1x"
+              className="far fa-envelope fa-1x"
               style={{ marginRight: "1rem" }}
             ></i>{" "}
             GrassyPark@Burgerden.co.za

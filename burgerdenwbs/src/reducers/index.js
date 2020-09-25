@@ -9,6 +9,7 @@ import sidesReducer from "./fooditemsReducers/sidesReducer";
 
 import alertsReducer from "./alertsReducer";
 import authReducer from "./authReducer";
+import cartReducer from "./cartReducer";
 
 export default combineReducers({
   // food items reducers
@@ -22,5 +23,10 @@ export default combineReducers({
 
   // alerts
   alerts: alertsReducer,
+
+  // auth
   auth: authReducer,
+
+  // cart
+  cart: cartReducer,
 });

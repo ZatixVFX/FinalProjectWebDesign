@@ -5,7 +5,11 @@ const CartSchema = mongoose.Schema({
     type: mongoose.Schema.Types.ObjectId,
     ref: "users",
   },
-  item: {
+  title: {
+    type: String,
+    required: true,
+  },
+  img: {
     type: String,
     required: true,
   },

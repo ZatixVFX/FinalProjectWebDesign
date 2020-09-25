@@ -22,7 +22,7 @@ const Location = () => {
                 placeholder="Search Location..."
               />
               <button className="button">
-                <i class="fas fa-map-marker-alt"></i>
+                <i className="fas fa-map-marker-alt"></i>
               </button>
             </div>
           </form>

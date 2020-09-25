@@ -7,7 +7,10 @@ import Location from "./components/location/Location";
 import OurStory from "./components/ourstory/OurStory";
 import Login from "./components/register_login/Login";
 import Register from "./components/register_login/Register";
+import Account from "./components/account/Account";
 import Cart from "./components/cart/Cart";
+
+import PrivateRoute from "./components/routing/PrivateRoute";
 
 import setAuthToken from "./utils/setAuthToken";
 
@@ -28,6 +31,7 @@ function App() {
       <Router>
         <Fragment>
           <Switch>
+            <PrivateRoute exact path="/account" component={Account} />
             <Route exact path="/" component={Home} />
             <Route exact path="/menu" component={Menu} />
             <Route exact path="/location" component={Location} />

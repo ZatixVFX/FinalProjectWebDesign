@@ -253,3 +253,45 @@ a.has-text-white:hover {
 .dropdown-style:hover {
   background-color: black !important;
 }
+
+.image.profile-Img-Size {
+  padding: 0rem 0rem;
+}
+
+.on-hover-effect {
+  transition: transform 0.2s;
+}
+
+.on-hover-effect:hover {
+  -ms-transform: scale(1.1);
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+}
+
+.modal-card {
+  border: 2px solid black;
+  border-radius: 34px;
+}
+
+.card-img-size {
+  padding: 1rem 10rem;
+  height: 313px;
+  width: 645px;
+}
+
+.card-img-size-2 {
+  height: 80% !important;
+  width: 80% !important;
+}
+
+.modal-add-cart-btn {
+  font-size: 21px;
+  font-weight: 650;
+  padding-left: 7.3rem;
+}
+
+.modal-card-price {
+  font-size: 27px !important;
+  font-weight: 650 !important;
+  padding-left: 10.7rem;
+}
